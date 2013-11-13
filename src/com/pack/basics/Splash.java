@@ -19,7 +19,7 @@ public class Splash extends Activity{
 				// TODO Auto-generated method stub
 				try {
 					sleep(1000);
-					Intent i = new Intent("com.pack.basics.MAINACTIVITY");
+					Intent i = new Intent("com.pack.basics.ACTIVITYTWO");
 					startActivity(i);
 					
 				} catch (InterruptedException e) {

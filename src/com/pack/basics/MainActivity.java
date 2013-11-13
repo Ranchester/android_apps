@@ -47,6 +47,7 @@ public class MainActivity extends Activity implements OnCheckedChangeListener{
         
         Button activity = (Button) findViewById(R.id.button2);
         
+        
         activity.setOnClickListener(new View.OnClickListener() {
 			
 			@Override

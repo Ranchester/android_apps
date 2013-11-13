@@ -5,7 +5,7 @@
  >
     
     <TextView
-    android:text="Popup! fuck"
+    android:text="Popup!"
     android:id="@+id/textview1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
