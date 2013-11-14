@@ -37,10 +37,7 @@ public class ActivityTwo extends ListActivity{
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		finish();
+		//finish();
 	}
-	
-	
 
-	
 }

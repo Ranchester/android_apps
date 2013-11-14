@@ -87,11 +87,12 @@ public class MainActivity extends Activity implements OnCheckedChangeListener{
 		
 	}
 
+	/*
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-	}
+	}*/
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
