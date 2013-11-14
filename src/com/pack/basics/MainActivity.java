@@ -41,7 +41,6 @@ public class MainActivity extends Activity implements OnCheckedChangeListener{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				textOut.setText(textIn.getText());
-				
 			}
 		});
         
