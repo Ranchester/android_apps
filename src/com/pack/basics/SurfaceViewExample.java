@@ -1,14 +1,24 @@
+//Threads and template for threads in surfaceview activity
+
 package com.pack.basics;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.view.View.OnTouchListener;
 
-public class SurfaceViewExample extends Activity{
+public class SurfaceViewExample extends Activity implements OnTouchListener{
 	
 	OurView v;
+	Bitmap ball;
+	float x, y;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +26,10 @@ public class SurfaceViewExample extends Activity{
 		super.onCreate(savedInstanceState);
 		
 		v = new OurView(this);
-		
+		v.setOnTouchListener(this);
+		ball = BitmapFactory.decodeResource(getResources(), R.drawable.ball2);
+		x = 0;
+		y = 0;
 		setContentView(v);
 	}
 	
@@ -56,8 +69,15 @@ public class SurfaceViewExample extends Activity{
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-			if (IsItOK == true){
+			while (IsItOK == true){
 				// draw canvas
+				if(!holder.getSurface().isValid()){
+					continue;
+				}
+				Canvas c = holder.lockCanvas();
+				c.drawARGB(255, 150, 150, 10);
+				c.drawBitmap(ball, x -(ball.getWidth()/2), y - (ball.getHeight()/2), null);
+				holder.unlockCanvasAndPost(c);
 			}
 			
 		}
@@ -82,6 +102,12 @@ public class SurfaceViewExample extends Activity{
 		}
 		
 	
+	}
+
+	@Override
+	public boolean onTouch(View v, MotionEvent event) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

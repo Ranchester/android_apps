@@ -11,8 +11,8 @@ import android.widget.ListView;
 //List activity class
 public class ActivityTwo extends ListActivity{
 	
-	String classNames[] = {"MainActivity", "Sweet", "ActivityThree", "ActivityFour"};
-	String names[] = {"Main", "Popup", "Image Background Changer", "Animation" };
+	String classNames[] = {"MainActivity", "Sweet", "ActivityThree", "ActivityFour", "SurfaceViewExample"};
+	String names[] = {"Main", "Popup", "Image Background Changer", "Animation", "ThreadedAnimation" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
