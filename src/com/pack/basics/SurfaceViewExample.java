@@ -101,13 +101,38 @@ public class SurfaceViewExample extends Activity implements OnTouchListener{
 			t.start();
 		}
 		
-	
 	}
 
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
 		// TODO Auto-generated method stub
-		return false;
+		
+		try {
+			Thread.sleep(50);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		switch(event.getAction()){
+		
+		case MotionEvent.ACTION_DOWN:
+			x = event.getX();
+			y = event.getY();
+			break;
+			
+		case MotionEvent.ACTION_UP:
+			x = event.getX();
+			y = event.getY();
+			break;
+			
+		case MotionEvent.ACTION_MOVE:
+			x = event.getX();
+			y = event.getY();
+			break;
+		
+		}
+		return true;
 	}
 
 }
