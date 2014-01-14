@@ -16,18 +16,20 @@ import android.view.View.OnTouchListener;
 
 public class SurfaceViewExample extends Activity implements OnTouchListener{
 	
-	OurView v;
-	Bitmap ball;
+	OurView v; //Constructed in this class
+	Bitmap ball, ninja;
+	Sprite sprite;
 	float x, y;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
+		//Customized view v with touch feature
 		v = new OurView(this);
 		v.setOnTouchListener(this);
 		ball = BitmapFactory.decodeResource(getResources(), R.drawable.ball2);
+		ninja = BitmapFactory.decodeResource(getResources(), R.drawable.walksprite);
 		x = 0;
 		y = 0;
 		setContentView(v);
@@ -39,7 +41,7 @@ public class SurfaceViewExample extends Activity implements OnTouchListener{
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		v.pause();
+		v.pause(); //OurView thread method
 	}
 
 
@@ -48,38 +50,53 @@ public class SurfaceViewExample extends Activity implements OnTouchListener{
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		v.resume();
+		v.resume(); //OurView thread method
 	}
 
 
-
+	//OurView class
 	public class OurView extends SurfaceView implements Runnable {
 		
+		//Setting thread for OurView
 		Thread t = null;
 		SurfaceHolder holder;
-		boolean IsItOK = false;
+		boolean IsItOK = false; //Thread check variable	
+		boolean spriteLoaded = false;
 		
-
+		//Constructor
 		public OurView(Context context) {
 			super(context);
 			// TODO Auto-generated constructor stub
 			holder = getHolder();
 		}
 
+		//Thread
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
+			sprite = new Sprite(this, ninja); //Sprite constructor
+			
 			while (IsItOK == true){
 				// draw canvas
 				if(!holder.getSurface().isValid()){
 					continue;
 				}
+				
+				if(!spriteLoaded){
+					spriteLoaded = true;
+				}
+												
 				Canvas c = holder.lockCanvas();
-				c.drawARGB(255, 150, 150, 10);
-				c.drawBitmap(ball, x -(ball.getWidth()/2), y - (ball.getHeight()/2), null);
+				onDraw(c);
 				holder.unlockCanvasAndPost(c);
 			}
 			
+		}
+		
+		protected void onDraw(Canvas canvas){
+			canvas.drawARGB(255, 150, 150, 10);
+			canvas.drawBitmap(ball, x -(ball.getWidth()/2), y - (ball.getHeight()/2), null);
+			sprite.onDraw(canvas);
 		}
 		
 		public void pause(){
@@ -114,6 +131,7 @@ public class SurfaceViewExample extends Activity implements OnTouchListener{
 			e.printStackTrace();
 		}
 		
+		//Updating x and y depending on the action
 		switch(event.getAction()){
 		
 		case MotionEvent.ACTION_DOWN:

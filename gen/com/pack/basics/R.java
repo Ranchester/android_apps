@@ -20,6 +20,7 @@ public final class R {
         public static final int kuva2=0x7f020006;
         public static final int kuva3=0x7f020007;
         public static final int kuva4=0x7f020008;
+        public static final int walksprite=0x7f020009;
     }
     public static final class id {
         public static final int BchangeBg=0x7f070013;
