@@ -13,7 +13,7 @@ public class Sprite {
 	int height, width;
 	int currentFrame = 0;
 	int direction = 3;
-	Bitmap n;
+	Bitmap n; //ninja graphics
 	OurView ov;
 
 	public Sprite(OurView ourView, Bitmap ninja) {
@@ -23,12 +23,12 @@ public class Sprite {
 		x = y = 0;
 		xSpeed = 5;
 		ySpeed = 0;
-		height = n.getHeight() / 4;
-		width = n.getWidth() / 6;
+		height = n.getHeight() / 4; //Sprite sheet dividing
+		width = n.getWidth() / 6; //sprite sheet dividing
 	}
 	
 	private void update() {
-		// TODO Auto-generated method stub
+		// a method for moving the ninja
 		
 		//sprite rows and directions
 		//row 0 down
@@ -74,7 +74,7 @@ public class Sprite {
 			e.printStackTrace();
 		}
 		
-		currentFrame = ++currentFrame % 6;
+		currentFrame = ++currentFrame % 6; //for the number of frame columns
 		x += xSpeed;
 		y += ySpeed;
 		
