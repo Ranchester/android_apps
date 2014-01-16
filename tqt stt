@@ -1,0 +1,71 @@
+[33mcommit cf71b0c01901217b4cb8031c19da17c5edebe6e7[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Jan 16 14:50:25 2014 +0200
+
+    VideoActivity and video example add
+
+[33mcommit 79d9f6e1211656e21f278ec32c0a0bb17bfdc0dd[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Tue Jan 14 13:48:27 2014 +0200
+
+    Ninja sprite and animation add.
+
+[33mcommit c2e0aa1aa67bf79b91a8dae1a13ed7695a3f1d16[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Tue Jan 14 09:42:58 2014 +0200
+
+    Drag ball add
+
+[33mcommit 2ef982200188adb52910ea53d4d0c079c430d930[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Mon Jan 13 12:54:25 2014 +0200
+
+    Add SurfaceView threaded animation class
+
+[33mcommit 56d4cb0baec56a2a9ee29effd810348e29e68462[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Nov 14 16:13:22 2013 +0200
+
+    MainActivity change
+
+[33mcommit 3cdc6f0ae845a79dbea0dc20d36962dbccf535fb[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Nov 14 12:48:45 2013 +0200
+
+    onPause() to menu screen and onPause() remove from MainActivity
+
+[33mcommit 70e672f74eeced920fc4111e84556789fbf5bf20[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Wed Nov 13 09:42:57 2013 +0200
+
+    opening screen change
+
+[33mcommit 00f77c86c30e5dce0a19a9e2563fc602326ecfd6[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Nov 7 13:24:54 2013 +0200
+
+    .gitignore add
+
+[33mcommit 71a5bcbde18a7039f542c06c29ced1832ea68252[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Nov 7 13:01:51 2013 +0200
+
+    splash screen add
+
+[33mcommit 5b4ef1d3f8a75f296071abffbfb6b9f851076bc9[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Nov 7 11:38:59 2013 +0200
+
+    started
+
+[33mcommit 98134121dd21a1d7275348be566389efdd04e4c1[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Nov 7 11:34:18 2013 +0200
+
+    first commit
+
+[33mcommit 4732ff702888fe862d62aa03e356325c74a51a64[m
+Author: Ranchester <akreivi@gmail.com>
+Date:   Thu Nov 7 11:28:22 2013 +0200
+
+    first commit
